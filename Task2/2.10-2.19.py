@@ -20,12 +20,12 @@ assert word == "L_o_r_e_m_ _i_p_s_u_m_ _d_o_l_o_r_ _s_i_t_ _a_m_e_t_,_ _c_o_n_s_
 # Zbudować string stworzony z pierwszych znaków wyrazów ze stringu line. Zbudować napis stworzony z ostatnich znaków wyrazów ze stringu line.
 line = "Lorem ipsum"
 helper = line.split()
-word = helper[0]
-word2 = helper[-1]
+word = "".join(word[0] for word in helper)
+word2 = "".join(word[-1] for word in helper)
 
 print(word, word2)
-assert word == "Lorem"
-assert word2 == "ipsum"
+assert word == "Li"
+assert word2 == "mm"
 
 # ZADANIE 2.13
 # Znaleźć łączną długość wyrazów w stringu line. Wskazówka: można skorzystać z funkcji sum().
